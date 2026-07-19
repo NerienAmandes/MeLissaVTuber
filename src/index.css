@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Локально подключённые Comfortaa (заголовки) и Nunito (интерфейс) */
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/fonts/comfortaa-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/fonts/comfortaa-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/nunito-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/nunito-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgb(var(--ink-rgb));
+  background-color: #f6ecdc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Палитра light (по умолчанию) */
+  --page-bg: #f6ecdc;
+  --page-grad-1: #f6c9a4;
+  --page-grad-2: #e8b8a8;
+  --page-grad-3: #d4a4b0;
+  --ink-rgb: 61 46 42;
+  --ink-soft-rgb: 90 70 64;
+  --coral-rgb: 232 164 140;
+  --lavender-rgb: 163 125 153;
+  --pink-soft-rgb: 212 164 176;
+  --pink-warm-rgb: 232 184 168;
+  --peach-rgb: 246 201 164;
+  --surface: rgba(255, 250, 244, 0.55);
+  --surface-strong: rgba(255, 255, 255, 0.7);
+  --surface-border: rgba(255, 255, 255, 0.45);
+  --grain-opacity: 0.18;
+  --grain-color: 0.24, 0.18, 0.16;
+  --scrollbar-track: #f6ecdc;
+  --scrollbar-thumb: #e8b8a8;
+  --scrollbar-thumb-hover: #e8a48c;
+  --focus: #a37d99;
+}
+
+.dark {
+  /* Тёплая сливово-бордовая палитра: уютно, не «грязно» */
+  --page-bg: #1d1019;
+  --page-grad-1: #4a1f30;
+  --page-grad-2: #2a1828;
+  --page-grad-3: #351828;
+  /* Текст — почти-белый тёплый: максимум контраста на тёмном фоне */
+  --ink-rgb: 255 250 240;
+  --ink-soft-rgb: 222 204 192;
+  /* Акценты чуть светлее — лучше читаются на тёмном фоне */
+  --coral-rgb: 240 165 135;
+  --lavender-rgb: 200 157 184;
+  --pink-soft-rgb: 224 180 192;
+  --pink-warm-rgb: 240 200 184;
+  --peach-rgb: 252 212 174;
+  --surface: rgba(48, 26, 38, 0.55);
+  --surface-strong: rgba(56, 30, 44, 0.88);
+  --surface-border: rgba(255, 200, 200, 0.14);
+  --grain-opacity: 0.22;
+  --grain-color: 0.05, 0.04, 0.04;
+  --scrollbar-track: #1d1019;
+  --scrollbar-thumb: #6a3a52;
+  --scrollbar-thumb-hover: #8a4a68;
+  --focus: #f0a587;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(120% 60% at 80% 0%, var(--page-grad-1) 0%, transparent 55%),
+    radial-gradient(100% 60% at 0% 30%, var(--page-grad-2) 0%, transparent 55%),
+    radial-gradient(80% 60% at 50% 100%, var(--page-grad-3) 0%, transparent 60%),
+    var(--page-bg);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: rgb(var(--ink-rgb));
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Зернистая текстура поверх всего */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.24  0 0 0 0 0.18  0 0 0 0 0.16  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 220px 220px;
+  transition: opacity 0.4s ease, mix-blend-mode 0.4s ease;
+}
+
+.dark .grain::before {
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.92  0 0 0 0 0.86  0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* Утилиты */
+.font-display { font-family: 'Comfortaa', system-ui, sans-serif; }
+.font-ui { font-family: 'Nunito', system-ui, sans-serif; }
+.font-jp { font-family: 'Nunito', 'Comfortaa', system-ui, sans-serif; font-style: italic; }
+
+.section-pad {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.container-soft {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(12px) saturate(110%);
+  -webkit-backdrop-filter: blur(12px) saturate(110%);
+  border: 1px solid var(--surface-border);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Кастомный scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 999px; border: 2px solid var(--scrollbar-track); }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+::selection {
+  background: var(--scrollbar-thumb-hover);
+  color: #fff;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px dashed var(--focus);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
