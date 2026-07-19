@@ -85,7 +85,7 @@ export default function Navbar() {
           </div>
 
           {/* Центральные ссылки (только десктоп) */}
-          <ul className="hidden md:flex items-center gap-1 font-ui text-sm">
+          <ul className="hidden md:flex items-center gap-1 font-ui text-base">
             {links.map((l) => (
               <li key={l.to}>
                 <NavLink
@@ -119,7 +119,7 @@ export default function Navbar() {
             </button>
             <Link
               to="/connect"
-              className="hidden sm:inline-flex items-center gap-2 font-ui text-sm font-bold rounded-full bg-coffee px-4 sm:px-5 py-2.5 text-cream shadow-soft hover:opacity-90 transition-opacity"
+              className="hidden sm:inline-flex items-center gap-2 font-ui text-base font-bold rounded-full bg-coffee px-5 sm:px-6 py-3 text-cream shadow-soft hover:opacity-90 transition-opacity"
             >
               зайти в гости →
             </Link>
@@ -192,7 +192,7 @@ export default function Navbar() {
             </span>
             <Link
               to="/connect"
-              className="inline-flex items-center gap-2 font-ui text-sm font-bold rounded-full bg-coffee px-4 py-2.5 text-cream shadow-soft hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 font-ui text-base font-bold rounded-full bg-coffee px-5 py-3 text-cream shadow-soft hover:opacity-90 transition-opacity"
             >
               зайти в гости →
             </Link>

@@ -5,6 +5,7 @@ import {
   Send,
   MessageCircle,
   Heart,
+  Coffee,
   type LucideIcon,
 } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
@@ -18,6 +19,7 @@ const iconMap: Record<SocialIcon, LucideIcon> = {
   Send,
   MessageCircle,
   Heart,
+  Coffee,
 };
 
 const toneClass: Record<string, string> = {

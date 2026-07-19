@@ -4,7 +4,8 @@ export type SocialIcon =
   | 'Twitter'
   | 'Send'
   | 'MessageCircle'
-  | 'Heart';
+  | 'Heart'
+  | 'Coffee';
 
 export type SocialLink = {
   name: string;
@@ -55,6 +56,13 @@ export const socials: SocialLink[] = [
     handle: '@vixen_voice',
     url: 'https://www.donationalerts.com/r/vixen_voice',
     icon: 'Heart',
+    tone: 'coral',
+  },
+  {
+    name: 'Boosty',
+    handle: 'melissa2026',
+    url: 'https://boosty.to/melissa2026',
+    icon: 'Coffee',
     tone: 'coral',
   },
 ];
