@@ -1,15 +1,6 @@
 import SectionHeading from '../ui/SectionHeading';
 import Reveal from '../ui/Reveal';
-import { vibeUrls } from '../../data/visuals';
-
-const tags = [
-  'закаты',
-  'дождь',
-  'мягкие пледы',
-  'чай',
-  'вишнёвый цвет',
-  'тишина',
-];
+import { vibeUrls, vibeTags } from '../../data/visuals';
 
 export default function Vibes() {
   return (
@@ -38,14 +29,14 @@ export default function Vibes() {
               >
                 <img
                   src={src}
-                  alt={tags[i] ?? `вайб ${i + 1}`}
+                  alt={vibeTags[i] ?? `вайб ${i + 1}`}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-brown/70 via-ink-brown/10 to-transparent opacity-80" />
                 <figcaption className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
                   <span className="font-display text-2xl sm:text-3xl text-white drop-shadow">
-                    #{tags[i] ?? `vibe${i + 1}`}
+                    #{vibeTags[i] ?? `vibe${i + 1}`}
                   </span>
                   <span className="rounded-full bg-white/85 px-3 py-1 font-ui text-[11px] uppercase tracking-widish text-ink-brown">
                     {String(i + 1).padStart(2, '0')}
