@@ -47,7 +47,7 @@ export default function About() {
                 {traits.map((t) => (
                   <li
                     key={t}
-                    className="rounded-full bg-white/70 px-3.5 py-1.5 font-ui text-sm text-ink-brown shadow-paper"
+                    className="rounded-full bg-white/70 px-3.5 py-1.5 font-ui text-sm text-ink-brown dark:text-coffee shadow-paper"
                   >
                     #{t}
                   </li>
@@ -62,10 +62,10 @@ export default function About() {
               <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full bg-coral/40 blur-2xl" />
               <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-lavender/40 blur-2xl" />
 
-              <h3 className="relative font-display text-3xl text-ink-brown">
+              <h3 className="relative font-display text-3xl text-ink-brown dark:text-coffee">
                 референс персонажа
               </h3>
-              <p className="relative mt-1 font-ui text-sm text-ink-soft/80">
+              <p className="relative mt-1 font-ui text-sm text-ink-soft/80 dark:text-coffee/80">
                 маленькая шпаргалка для художников
               </p>
 
@@ -75,10 +75,10 @@ export default function About() {
                     key={f.label}
                     className="rounded-3xl bg-white/70 px-4 py-3 shadow-paper"
                   >
-                    <dt className="font-ui text-[11px] uppercase tracking-widish text-lavender">
+                    <dt className="font-ui text-[11px] uppercase tracking-widish text-lavender dark:text-coffee">
                       {f.label}
                     </dt>
-                    <dd className="mt-1 font-ui text-sm sm:text-base text-ink-brown">
+                    <dd className="mt-1 font-ui text-sm sm:text-base text-ink-brown dark:text-coffee">
                       {f.value}
                     </dd>
                   </div>
@@ -89,7 +89,7 @@ export default function About() {
                 {highlights.map((h) => (
                   <div
                     key={h.label}
-                    className={`flex flex-col items-center justify-center gap-1.5 rounded-3xl ${h.tone} px-3 py-4 text-center`}
+                    className={`flex flex-col items-center justify-center gap-1.5 rounded-3xl ${h.tone} dark:text-coffee px-3 py-4 text-center`}
                   >
                     <h.icon size={20} />
                     <span className="font-ui text-[11px] sm:text-xs font-medium leading-tight">
