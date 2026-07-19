@@ -66,8 +66,8 @@ export default function Hero() {
               loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-cream/40 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-full bg-white/80 px-4 py-2.5 shadow-paper backdrop-blur">
-              <span className="flex items-center gap-2 font-ui text-sm text-ink-brown">
+            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-full bg-white/95 dark:bg-[#404449]/95 px-4 py-2.5 shadow-paper backdrop-blur">
+              <span className="flex items-center gap-2 font-ui text-sm text-ink-brown dark:text-white">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="absolute inline-flex h-full w-full animate-soft-pulse rounded-full bg-coral opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-coral" />

@@ -51,20 +51,6 @@ export const socials: SocialLink[] = [
     tone: 'coral',
   },
   {
-    name: 'Twitter / X',
-    handle: '@melissa_vt',
-    url: 'https://x.com/',
-    icon: 'Twitter',
-    tone: 'coral',
-  },
-  {
-    name: 'Discord',
-    handle: 'Сервер лисьей норы',
-    url: 'https://discord.gg/',
-    icon: 'MessageCircle',
-    tone: 'coral',
-  },
-  {
     name: 'Поддержать',
     handle: '@vixen_voice',
     url: 'https://www.donationalerts.com/r/vixen_voice',

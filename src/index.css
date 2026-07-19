@@ -150,6 +150,11 @@ body {
   margin-inline: auto;
 }
 
+.container-wide {
+  width: min(1400px, 96%);
+  margin-inline: auto;
+}
+
 .glass {
   background: var(--surface);
   backdrop-filter: blur(12px) saturate(110%);

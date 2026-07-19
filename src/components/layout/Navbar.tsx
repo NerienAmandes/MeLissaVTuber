@@ -59,7 +59,7 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className={`container-soft flex items-center justify-between gap-3 sm:gap-4 rounded-full px-4 sm:px-6 py-3 transition-all duration-500 ${
+          className={`container-wide flex items-center justify-between gap-3 sm:gap-4 rounded-full px-4 sm:px-6 py-3 transition-all duration-500 ${
             scrolled
               ? 'glass shadow-paper ring-1 ring-coral/20'
               : 'bg-cream-soft/70 shadow-soft ring-1 ring-coral/15'
