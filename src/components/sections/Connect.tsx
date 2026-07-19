@@ -21,10 +21,10 @@ const iconMap: Record<SocialIcon, LucideIcon> = {
 };
 
 const toneClass: Record<string, string> = {
-  coral: 'from-coral/20 via-pink-warm/30 to-cream text-coral',
-  lavender: 'from-lavender/20 via-pink-soft/25 to-cream text-lavender',
-  peach: 'from-peach/35 via-pink-warm/25 to-cream text-ink-brown',
-  pink: 'from-pink-soft/30 via-pink-warm/20 to-cream text-lavender',
+  coral: 'from-coral/20 via-pink-warm/15 to-cream/10 text-coral',
+  lavender: 'from-coral/20 via-pink-warm/15 to-cream/10 text-coral',
+  peach: 'from-coral/20 via-pink-warm/15 to-cream/10 text-coral',
+  pink: 'from-coral/20 via-pink-warm/15 to-cream/10 text-coral',
 };
 
 export default function Connect() {

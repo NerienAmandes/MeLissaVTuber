@@ -5,9 +5,9 @@ import { loreFacts, traits, mantra } from '../../data/lore';
 
 const highlights = [
   { icon: Heart, label: 'ASMR у камина', tone: 'bg-coral/15 text-coral' },
-  { icon: Coffee, label: 'Чайные стримы', tone: 'bg-peach/40 text-ink-brown' },
-  { icon: Music, label: 'Совместные джемы', tone: 'bg-pink-soft/30 text-lavender' },
-  { icon: BookOpen, label: 'Деликатные игры', tone: 'bg-lavender/20 text-lavender' },
+  { icon: Coffee, label: 'Чайные стримы', tone: 'bg-coral/15 text-coral' },
+  { icon: Music, label: 'Совместные джемы', tone: 'bg-coral/15 text-coral' },
+  { icon: BookOpen, label: 'Деликатные игры', tone: 'bg-coral/15 text-coral' },
 ];
 
 export default function About() {

@@ -119,7 +119,7 @@ export default function Navbar() {
             </button>
             <Link
               to="/connect"
-              className="hidden sm:inline-flex items-center gap-2 font-ui text-sm font-bold rounded-full bg-coffee px-4 sm:px-5 py-2.5 text-cream shadow-soft hover:bg-lavender transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 font-ui text-sm font-bold rounded-full bg-coffee px-4 sm:px-5 py-2.5 text-cream shadow-soft hover:opacity-90 transition-opacity"
             >
               зайти в гости →
             </Link>
@@ -192,7 +192,7 @@ export default function Navbar() {
             </span>
             <Link
               to="/connect"
-              className="inline-flex items-center gap-2 font-ui text-sm font-bold rounded-full bg-coffee px-4 py-2.5 text-cream shadow-soft hover:bg-lavender transition-colors"
+              className="inline-flex items-center gap-2 font-ui text-sm font-bold rounded-full bg-coffee px-4 py-2.5 text-cream shadow-soft hover:opacity-90 transition-opacity"
             >
               зайти в гости →
             </Link>
