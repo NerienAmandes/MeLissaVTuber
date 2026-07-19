@@ -19,7 +19,7 @@ export default {
         'ink-brown': 'rgb(var(--ink-rgb) / <alpha-value>)',
         'ink-soft': 'rgb(var(--ink-soft-rgb) / <alpha-value>)',
         'paper-shadow': 'rgba(61, 46, 42, 0.08)',
-        'navy-deep': '#1d1019',
+        'navy-deep': '#2a3142',
       },
       fontFamily: {
         display: ['Comfortaa', 'system-ui', 'sans-serif'],

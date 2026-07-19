@@ -18,7 +18,7 @@ const palette: Record<
   lavender: { from: '#d4a4b0', to: '#a37d99', accent: '#fbeef3', ink: '#3d2e2a' },
   peach: { from: '#f6c9a4', to: '#e8b8a8', accent: '#fff0e0', ink: '#3d2e2a' },
   pink: { from: '#e8b8a8', to: '#d4a4b0', accent: '#fde6e6', ink: '#3d2e2a' },
-  navy: { from: '#3a2536', to: '#1d1019', accent: '#f6c9a4', ink: '#f6ecdc' },
+  navy: { from: '#596f9a', to: '#2a3142', accent: '#f0c9a4', ink: '#f0f3fa' },
   rose: { from: '#e89a8a', to: '#b85860', accent: '#fff0e6', ink: '#3d2e2a' },
 };
 

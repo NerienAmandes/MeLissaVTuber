@@ -71,29 +71,29 @@
 }
 
 .dark {
-  /* Тёплая сливово-бордовая палитра: уютно, не «грязно» */
-  --page-bg: #1d1019;
-  --page-grad-1: #4a1f30;
-  --page-grad-2: #2a1828;
-  --page-grad-3: #351828;
-  /* Текст — почти-белый тёплый: максимум контраста на тёмном фоне */
-  --ink-rgb: 255 250 240;
-  --ink-soft-rgb: 222 204 192;
-  /* Акценты чуть светлее — лучше читаются на тёмном фоне */
-  --coral-rgb: 240 165 135;
-  --lavender-rgb: 200 157 184;
-  --pink-soft-rgb: 224 180 192;
-  --pink-warm-rgb: 240 200 184;
-  --peach-rgb: 252 212 174;
-  --surface: rgba(48, 26, 38, 0.55);
-  --surface-strong: rgba(56, 30, 44, 0.88);
-  --surface-border: rgba(255, 200, 200, 0.14);
+  /* Холодная сине-лавандовая палитра */
+  --page-bg: #2a3142;            /* глубже #405577 для контраста */
+  --page-grad-1: #8589ac;        /* светлый — подсветка */
+  --page-grad-2: #596f9a;        /* средний */
+  --page-grad-3: #405577;        /* тёмный — основной тон */
+  /* Текст — чистый белый и холодный светлый для иерархии */
+  --ink-rgb: 255 255 255;
+  --ink-soft-rgb: 200 210 225;
+  /* Акценты — холодные тона, никакого розового */
+  --coral-rgb: 133 137 172;       /* #8589AC — основной светлый */
+  --lavender-rgb: 89 111 154;     /* #596F9A — основной средний */
+  --pink-soft-rgb: 175 182 210;   /* холодный светлый */
+  --pink-warm-rgb: 145 155 190;   /* холодный средний */
+  --peach-rgb: 110 130 170;       /* между средним и тёмным */
+  --surface: rgba(42, 49, 66, 0.55);
+  --surface-strong: rgba(42, 49, 66, 0.88);
+  --surface-border: rgba(180, 195, 220, 0.14);
   --grain-opacity: 0.22;
   --grain-color: 0.05, 0.04, 0.04;
-  --scrollbar-track: #1d1019;
-  --scrollbar-thumb: #6a3a52;
-  --scrollbar-thumb-hover: #8a4a68;
-  --focus: #f0a587;
+  --scrollbar-track: #2a3142;
+  --scrollbar-thumb: #596f9a;
+  --scrollbar-thumb-hover: #8589ac;
+  --focus: #8589ac;
   color-scheme: dark;
 }
 
@@ -131,7 +131,7 @@ body {
 
 .dark .grain::before {
   mix-blend-mode: screen;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.92  0 0 0 0 0.86  0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.86  0 0 0 0 0.88  0 0 0 0 0.95  0 0 0 0.32 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
 
 /* Утилиты */
